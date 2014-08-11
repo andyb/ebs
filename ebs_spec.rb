@@ -14,7 +14,7 @@ module Ebs
       ebs = EbsCalc.new 
       result = ebs.calc @@test_dev_estimates, @@test_dev_perfect_velocity
       expect(result.length).to eq 1
-      expect(result.values[0]).to eq 100
+      expect(result.values[0]).to eq 1000
     end
   end
   
@@ -26,7 +26,7 @@ module Ebs
       result.each do |k,v| 
         total_iterations += v
       end
-      expect(total_iterations).to eq 100
+      expect(total_iterations).to eq 1000
       
     end
   end
