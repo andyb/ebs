@@ -2,9 +2,10 @@ module Ebs
   class EbsCalc
     #run 100 iterations and return array of ship dates and count.
     def calc (estimates, velocities)
+      iterations = 100
       predictions = Hash.new(0)
       r = Random.new
-      1000.times {
+      iterations.times {
         prediction = 0
         estimates.each { |x|
           prediction +=  x / velocities[r.rand(0...velocities.length-1)]
