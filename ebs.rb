@@ -16,7 +16,7 @@ module Ebs
         predictions[final_prediction] = predictions[final_prediction] += 1
       }
       
-      puts predictions
+      puts predictions.values
       return predictions
     end
   end
