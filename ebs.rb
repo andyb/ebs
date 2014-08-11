@@ -4,7 +4,7 @@ module Ebs
     def calc (estimates, velocities)
       predictions = Hash.new(0)
       r = Random.new
-      100.times {
+      1000.times {
         prediction = 0
         estimates.each { |x|
           prediction +=  x / velocities[r.rand(0...velocities.length-1)]
@@ -16,7 +16,6 @@ module Ebs
         predictions[final_prediction] = predictions[final_prediction] += 1
       }
       
-      puts predictions.values
       return predictions
     end
   end
