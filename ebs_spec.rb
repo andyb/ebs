@@ -36,7 +36,6 @@ module Ebs
       ebs = EbsCalc.new 
       result = ebs.calc @@test_dev_estimates,@@test_dev_velocity
       expect(result.length).to be > 1
-      puts result
     end
   end
   
