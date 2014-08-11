@@ -10,11 +10,13 @@ module Ebs
           prediction +=  x / velocities[r.rand(0...velocities.length-1)]
         }
         
+        final_prediction = prediction.round
+        
         #increment number of times prediction has been made
-        predictions[prediction] = predictions[prediction] += 1
+        predictions[final_prediction] = predictions[final_prediction] += 1
       }
       
-      puts predictions.length
+      puts predictions
       return predictions
     end
   end
